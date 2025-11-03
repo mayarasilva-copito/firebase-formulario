@@ -1,0 +1,16 @@
+* {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+.holi {
+  color: black;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.contenedor {
+  background-color: rgb(245, 235, 235);
+  flex-direction: column;
+}

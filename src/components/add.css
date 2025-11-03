@@ -1,0 +1,80 @@
+.formu {
+  background: #d8d1dd;
+  padding: 20px;
+  border-radius: 14px;
+  width: 500px;
+  height: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formu:hover {
+  transform: translateY(-4px); /* Se levanta un poquito */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Título */
+.form-title {
+  font-size: 22px;
+  color: #8351bd;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Labels */
+.form-label {
+  font-size: 15px;
+  color: #6a4d99;
+  font-weight: bold;
+  display: block; /* ✅ para que queden arriba del input */
+}
+
+/* Inputs */
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 12px 0;
+  border: 1px solid #c8b2ff;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s;
+  box-sizing: border-box; /* ✅ evita que se salga del ancho */
+}
+
+.form-input:focus {
+  border-color: #8c63ff;
+  box-shadow: 0 0 6px rgba(140, 99, 255, 0.4);
+}
+
+/* Botón */
+.form-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #8351bd;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 40px;
+}
+
+.form-button:hover {
+  background: #7343a7;
+}
+
+.contenedor p {
+  display: flex;
+  justify-content: center; /* Centra horizontal */
+  align-items: flex-start; /* Alinea arriba */
+  gap: 40px; /* Espacio entre tarjeta y lista */
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.contenedor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
