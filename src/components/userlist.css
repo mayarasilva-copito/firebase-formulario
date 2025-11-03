@@ -1,22 +1,82 @@
-h2 {
-  color: black;
-}
-.usuario {
-  margin: 30px;
-  border: 5px #7343a7 solid;
-  justify-content: space-around;
-  height: auto;
-  width: auto;
-}
+/* Contenedor principal de la lista */
 .contenedor {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
 }
+
+/* Título */
+h2 {
+  color: #4c2a73;
+  text-align: center;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+/* Tarjeta individual de usuario */
 .usuario {
-  padding: 10px;
-  border-radius: 10px;
+  background-color: #ffffff;
+  margin: 15px;
+  border: 5px solid #7343a7;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(115, 67, 167, 0.3);
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
+  height: auto;
+  width: auto;
+  transition: transform 0.4s ease;
+}
+
+/* Efecto al pasar el mouse */
+.usuario:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(115, 67, 167, 0.4);
+}
+
+/* Texto dentro de las tarjetas */
+.usuario p {
+  color: #333;
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+/* Nombre del usuario más destacado */
+.usuario strong {
+  color: #7343a7;
+  font-weight: bold;
+}
+
+/* Botones dentro de las tarjetas (si los tienes) */
+.usuario button {
+  background-color: #7343a7;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.usuario button:hover {
+  background-color: #8a5cc4;
+}
+
+/* Diseño responsive */
+@media (max-width: 600px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .usuario {
+    width: 90%;
+    margin: 0 auto;
+  }
 }

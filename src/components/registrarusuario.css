@@ -1,0 +1,53 @@
+/* Contenedor principal */
+.registrarusuario {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.registrarusuario:hover {
+  transform: scale(1.02);
+}
+
+/* Título */
+.registrarusuario h1 {
+  margin-bottom: 25px;
+  color: #1a3d7c;
+}
+
+/* Campos de entrada */
+.registrarusuario input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  font-size: 15px;
+}
+
+.registrarusuario input:focus {
+  border-color: #4c8ed9;
+  outline: none;
+}
+
+/* Botón */
+.registrarusuario button {
+  width: 100%;
+  background: #1a3d7c;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.registrarusuario button:hover {
+  background: #356ab8;
+}
