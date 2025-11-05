@@ -13,6 +13,7 @@ function RegistrarUsuario({ onRegister, cambiarVista }) {
         // Signed up
         const user = userCredential.user;
         console.log("Cuenta creada con exito");
+        onRegister(user);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -39,6 +40,7 @@ function RegistrarUsuario({ onRegister, cambiarVista }) {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={registrar}>Registrar</button>
+      <button onClick={cambiarVista}>Iniciar sesion</button>
     </div>
   );
 }

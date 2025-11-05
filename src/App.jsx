@@ -1,42 +1,55 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+//importamos firebase
 import app from "./firebase";
+//Autentication
+import { getAuth, signOut } from "firebase/auth";
+
 import AddUser from "./components/AddUser";
 import UserList from "./components/UserList";
-import RegistrarUsuario from "./components/RegistrarUsuario";
 import Login from "./components/Login";
+import RegistrarUsuario from "./components/RegistrarUsuario";
 
 function App() {
-  const [count, setCount] = useState(0);
   console.log(app);
+
+  const [usuario, setUsuario] = useState(null);
+  const [mostrarLogin, setMostrarLogin] = useState(true);
+
+  // Funcion para cerrar sesion
+  const cerrarSesion = async () => {
+    const auth = getAuth();
+    await signOut(auth);
+    setUsuario(null);
+  };
+
+  const cambiarVista = () => {
+    setMostrarLogin(!mostrarLogin);
+  };
 
   return (
     <>
-      <div>
-        <h1 className="text-center">Mi pagina web con React y Firebase</h1>
-      </div>
-      <div className="Login">
-        <p className="logi">
-          <Login />
-        </p>
-      </div>
-      <div className="registrar">
-        <p className="regi">
-          <RegistrarUsuario />
-        </p>
-      </div>
-      <div className="contenedor">
-        <p className="p1">
+      {!usuario ? (
+        mostrarLogin ? (
+          <Login onLogin={setUsuario} cambiarVista={cambiarVista} />
+        ) : (
+          <RegistrarUsuario
+            onRegister={setUsuario}
+            cambiarVista={cambiarVista}
+          />
+        )
+      ) : (
+        <>
+          <div>
+            <h1 className="text-center">Mi pagina web con React y Firebase</h1>
+          </div>
+
           <AddUser />
-        </p>
-      </div>
-      <div className="user">
-        <p className="p2">
+          <hr />
           <UserList />
-        </p>
-      </div>
+          <button onClick={cerrarSesion}>Cerrar sesion</button>
+        </>
+      )}
     </>
   );
 }
