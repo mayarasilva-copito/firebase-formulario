@@ -27,7 +27,7 @@
   font-size: 15px;
   color: #6a4d99;
   font-weight: bold;
-  display: block; /* ✅ para que queden arriba del input */
+  display: block;
 }
 
 /* Inputs */
@@ -65,9 +65,8 @@
 
 .contenedor p {
   display: flex;
-  justify-content: center; /* Centra horizontal */
-  align-items: flex-start; /* Alinea arriba */
-  gap: 40px; /* Espacio entre tarjeta y lista */
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
 }
@@ -75,14 +74,14 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-} /* 🟣 CONTENEDOR DEL FORMULARIO */
+}
 .formu {
   padding: 25px;
   border-radius: 14px;
   width: 500px;
   height: 600px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  margin: 40px auto; /* Centra el formulario horizontalmente */
+  margin: 40px auto;
   border: 5px solid blueviolet;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -162,9 +161,9 @@
 /* 🟣 AJUSTE DEL CONTENEDOR GENERAL (formulario + lista) */
 .contenedor {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: flex-start; /* Alinea arriba */
-  gap: 40px; /* Espacio entre el formulario y la lista */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
   flex-direction: row;
   flex-wrap: nowrap;
   margin-top: 30px;

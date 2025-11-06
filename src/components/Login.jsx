@@ -5,7 +5,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import "./login.css"; // 👈 Importa el archivo CSS
+import "./login.css";
 
 const provider = new GoogleAuthProvider();
 
@@ -44,29 +44,31 @@ function Login({ onLogin, cambiarVista }) {
 
   return (
     <div className="login-container">
-      <h1>🧑‍💻 Iniciar Sesión</h1>
-      <input
-        type="email"
-        placeholder="Correo electrónico"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Contraseña"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button className="btn-iniciar" onClick={iniciarSesion}>
-        Iniciar Sesión
-      </button>
-      <button className="btn-google" onClick={iniciarSesionGoogle}>
-        🔵 Iniciar Sesión con Google
-      </button>
-      <p>No tienes una cuenta?</p>
-      <button className="btn-crear" onClick={cambiarVista}>
-        Crear cuenta ✨
-      </button>
+      <div className="login-card">
+        <h1>🧑‍💻 Iniciar Sesión</h1>
+        <input
+          type="email"
+          placeholder="Correo electrónico"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button className="btn-iniciar" onClick={iniciarSesion}>
+          Iniciar Sesión
+        </button>
+        <button className="btn-google" onClick={iniciarSesionGoogle}>
+          🔵 Iniciar Sesión con Google
+        </button>
+        <p>No tienes una cuenta?</p>
+        <button className="btn-crear" onClick={cambiarVista}>
+          Crear cuenta ✨
+        </button>
+      </div>
     </div>
   );
 }

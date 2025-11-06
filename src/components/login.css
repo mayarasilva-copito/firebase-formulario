@@ -6,7 +6,17 @@
   height: 100vh;
   text-align: center;
   background-color: #f3f0ff;
+  background-color: linear-gradient(135deg, #100529, #f3f0ff);
   font-family: Arial, sans-serif;
+}
+
+.login-card {
+  background: rgb(214, 211, 219);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border: 3px solid #7343a7;
+  width: 350px;
 }
 
 .login-container h1 {
@@ -34,7 +44,6 @@
   transition: 0.3s ease;
 }
 
-/* Botón morado para iniciar */
 .btn-iniciar {
   background-color: #7343a7;
   color: white;
@@ -45,7 +54,6 @@
   background-color: #562f7d;
 }
 
-/* Botón rojo para Google */
 .btn-google {
   background-color: #d94c4c;
   color: white;
@@ -56,7 +64,6 @@
   background-color: #b83f3f;
 }
 
-/* Botón crear cuenta */
 .btn-crear {
   background-color: transparent;
   color: #7343a7;

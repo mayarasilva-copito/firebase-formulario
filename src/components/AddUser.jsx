@@ -11,7 +11,7 @@ function AddUser() {
   const [dni, setDni] = useState("");
 
   const AgregarUsuarios = async (e) => {
-    e.preventDefault(); // ⛔ evita recargar el formulario
+    e.preventDefault();
 
     try {
       const docRef = await addDoc(collection(db, "usuarios"), {

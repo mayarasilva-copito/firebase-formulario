@@ -9,6 +9,15 @@
   font-family: Arial, sans-serif;
 }
 
+.registrar-card {
+  background: rgb(214, 211, 219);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border: 3px solid #7343a7;
+  width: 350px;
+}
+
 .registrar-container h1 {
   color: #4b2b83;
   margin-bottom: 20px;
@@ -33,7 +42,6 @@
   transition: 0.3s ease;
 }
 
-/* Botón principal (morado) */
 .btn-registrar {
   background-color: #7343a7;
   color: white;
@@ -44,7 +52,6 @@
   background-color: #562f7d;
 }
 
-/* Botón secundario (texto) */
 .btn-iniciar {
   background-color: transparent;
   color: #7343a7;
