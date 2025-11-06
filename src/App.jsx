@@ -47,7 +47,11 @@ function App() {
           <AddUser />
           <hr />
           <UserList />
-          <button onClick={cerrarSesion}>Cerrar sesion</button>
+          <div className="contenedor-cerrar">
+            <button className="btn-cerrar" onClick={cerrarSesion}>
+              🚪 Cerrar Sesión
+            </button>
+          </div>
         </>
       )}
     </>

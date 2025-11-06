@@ -6,13 +6,11 @@
   height: 600px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   margin: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 6px blueviolet solid;
   border-radius: 7px;
 }
 
 .formu:hover {
-  transform: translateY(-4px); /* Se levanta un poquito */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
@@ -40,8 +38,6 @@
   border: 1px solid #c8b2ff;
   border-radius: 6px;
   outline: none;
-  transition: 0.2s;
-  box-sizing: border-box; /* ✅ evita que se salga del ancho */
 }
 
 .form-input:focus {
@@ -79,4 +75,97 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+} /* 🟣 CONTENEDOR DEL FORMULARIO */
+.formu {
+  padding: 25px;
+  border-radius: 14px;
+  width: 500px;
+  height: 600px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  margin: 40px auto; /* Centra el formulario horizontalmente */
+  border: 5px solid blueviolet;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formu:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* 🟣 TÍTULO */
+.form-title {
+  font-size: 26px;
+  color: #7343a7;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(115, 67, 167, 0.2);
+}
+
+/* 🟣 LABELS */
+.form-label {
+  font-size: 15px;
+  color: #5d3d8c;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 🟣 INPUTS */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 2px solid #c8b2ff;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #faf8ff;
+  transition: 0.25s;
+}
+
+.form-input:focus {
+  border-color: #8c63ff;
+  box-shadow: 0 0 8px rgba(140, 99, 255, 0.4);
+  background-color: #fff;
+}
+
+/* 🟣 BOTÓN */
+.form-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: #8351bd;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 30px;
+  letter-spacing: 0.5px;
+}
+
+.form-button:hover {
+  background: #7343a7;
+  transform: scale(1.03);
+}
+
+/* 🟣 CONTENEDOR DE CAMPOS */
+.contenedor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 🟣 AJUSTE DEL CONTENEDOR GENERAL (formulario + lista) */
+.contenedor {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: flex-start; /* Alinea arriba */
+  gap: 40px; /* Espacio entre el formulario y la lista */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 30px;
 }

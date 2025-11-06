@@ -12,3 +12,30 @@ body {
   background-color: rgb(245, 235, 235);
   flex-direction: column;
 }
+/* 🟣 Contenedor centrado */
+.contenedor-cerrar {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente si el contenedor tiene altura */
+  margin: 30px 0;
+}
+
+/* 🟣 Estilo del botón */
+.btn-cerrar {
+  background-color: #8351bd;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(115, 67, 167, 0.3);
+}
+
+.btn-cerrar:hover {
+  background-color: #7343a7;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(115, 67, 167, 0.4);
+}

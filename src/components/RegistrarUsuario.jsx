@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import "./registrarusuario.css"; // 👈 Importamos el CSS separado
 
 function RegistrarUsuario({ onRegister, cambiarVista }) {
   const [email, setEmail] = useState("");
@@ -10,38 +11,39 @@ function RegistrarUsuario({ onRegister, cambiarVista }) {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed up
         const user = userCredential.user;
-        console.log("Cuenta creada con exito");
+        console.log("Cuenta creada con éxito");
         onRegister(user);
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
         console.log("Error al registrar el usuario");
-        console.log(errorCode);
-        console.log(errorMessage);
+        console.log(error.code);
+        console.log(error.message);
       });
   };
 
   return (
-    <div>
-      <h1>Registrar Usuario</h1>
+    <div className="registrar-container">
+      <h1>✨ Crear Cuenta</h1>
       <input
         type="email"
-        placeholder="Escribe tu Email"
+        placeholder="📧 Escribe tu Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         type="password"
-        placeholder="Escribe tu contraseña"
+        placeholder="🔒 Escribe tu Contraseña"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={registrar}>Registrar</button>
-      <button onClick={cambiarVista}>Iniciar sesion</button>
-      <button>Iniciar Sesion con Google</button>
+      <button className="btn-registrar" onClick={registrar}>
+        Crear Cuenta ✨
+      </button>
+      <p>¿Ya tienes una cuenta?</p>
+      <button className="btn-iniciar" onClick={cambiarVista}>
+        Iniciar Sesión 🔑
+      </button>
     </div>
   );
 }

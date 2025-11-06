@@ -1,4 +1,4 @@
-.registrar-container {
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,12 +9,12 @@
   font-family: Arial, sans-serif;
 }
 
-.registrar-container h1 {
+.login-container h1 {
   color: #4b2b83;
   margin-bottom: 20px;
 }
 
-.registrar-container input {
+.login-container input {
   margin: 10px;
   padding: 10px;
   width: 250px;
@@ -23,8 +23,9 @@
   outline: none;
 }
 
-.btn-registrar,
-.btn-iniciar {
+.btn-iniciar,
+.btn-google,
+.btn-crear {
   margin: 10px;
   padding: 10px 20px;
   border-radius: 10px;
@@ -33,25 +34,36 @@
   transition: 0.3s ease;
 }
 
-/* Botón principal (morado) */
-.btn-registrar {
+/* Botón morado para iniciar */
+.btn-iniciar {
   background-color: #7343a7;
   color: white;
   border: none;
 }
 
-.btn-registrar:hover {
+.btn-iniciar:hover {
   background-color: #562f7d;
 }
 
-/* Botón secundario (texto) */
-.btn-iniciar {
+/* Botón rojo para Google */
+.btn-google {
+  background-color: #d94c4c;
+  color: white;
+  border: none;
+}
+
+.btn-google:hover {
+  background-color: #b83f3f;
+}
+
+/* Botón crear cuenta */
+.btn-crear {
   background-color: transparent;
   color: #7343a7;
   border: none;
   text-decoration: underline;
 }
 
-.btn-iniciar:hover {
+.btn-crear:hover {
   color: #4b2b83;
 }
