@@ -41,6 +41,7 @@ function RegistrarUsuario({ onRegister, cambiarVista }) {
       />
       <button onClick={registrar}>Registrar</button>
       <button onClick={cambiarVista}>Iniciar sesion</button>
+      <button>Iniciar Sesion con Google</button>
     </div>
   );
 }
